@@ -1,0 +1,21 @@
+<div  class="d-flex justify-content-center" *ngIf="!errmsg">
+  <loading-spinner></loading-spinner>
+</div>
+
+
+
+
+<div *ngIf="errmsg" >
+  <h1 id="title" class="title" style="padding-bottom: 3%;">Registration Failed </h1>
+
+    <div class="alert alert-danger"  role="alert"  style="padding-top: 3%;">
+      <div style="padding: 3%;">
+       <i class="fa fa-exclamation-triangle" aria-hidden="true" style='font-size:38px;'></i>
+       <h6 style="color: rgb(185, 90, 90);padding-top: 4%;">{{ errmsg }}</h6>
+      </div>
+    </div>
+  <section class="sign-in-or-up" aria-label="Sign in or sign up">
+    <p><a class="text-link" routerLink="./login">Back to Log In</a></p>
+    <p><a routerLink="./register" class="text-link">Register</a></p>
+  </section>
+</div>
